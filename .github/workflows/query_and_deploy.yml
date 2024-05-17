@@ -7,7 +7,6 @@ on:
     inputs:
       timesToken:
         required: true
-        description: Real-time token to query results in runchina
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
