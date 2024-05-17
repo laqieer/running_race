@@ -49,7 +49,7 @@ def print_results(results):
             if result["raceDistance"] == raceDistances[raceItem]:
                 if not has_result:
                     has_result = True
-                    print(raceItem)
+                    print('# {raceItem}\n')
                     print("|Race|Date|Race Level|Time Level|Number|Chip Time|Gun Time|Split Time|")
                     print("|---|---|---|---|---|---|---|---|")
                 print(f"|{result['raceName']}|{result['scoreTime']}|{result['competitionType']}|{standardLevels[result['standardLevel']+1]}|{result['entryNumber']}|{result['scoreChip']}|{result['scoreShot']}|{'<br>'.join([x['paragraphName'] + ' ' + x['paragraphScore'] for x in result['paragraphScoreList']])}|")
