@@ -50,9 +50,9 @@ def print_results(results):
                 if not has_result:
                     has_result = True
                     print(f"\n# {raceItem}\n")
-                    print("|Race|Date|Race Level|Time Level|Number|Chip Time|Gun Time|Split Time|")
+                    print("|Race|Date|Race Level|Number|Chip Time|Gun Time|Time Level|Split Time|")
                     print("|---|---|---|---|---|---|---|---|")
-                print(f"|{result['raceName']}|{result['scoreTime']}|{result['competitionType']}|{standardLevels[result['standardLevel']+1]}|{result['entryNumber']}|{result['scoreChip']}|{result['scoreShot']}|{'<br>'.join([x['paragraphName'] + ' ' + x['paragraphScore'] for x in result['paragraphScoreList']])}|")
+                print(f"|{result['raceName']}|{result['scoreTime']}|{result['competitionType']}|{result['entryNumber']}|{result['scoreChip']}|{result['scoreShot']}|{standardLevels[result['standardLevel']+1]}|{'<br>'.join([x['paragraphName'] + '<br>' + x['paragraphScore'] for x in result['paragraphScoreList']])}|")
 
 if __name__ == "__main__":
     print_results(query_results())
