@@ -2,11 +2,12 @@
 name: Query results and deploy to Pages
 
 on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    inputs:
-      timesToken:
-        required: true
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -37,7 +38,7 @@ jobs:
           pip install requests
       - name: Query results from runchina
         run: |
-          python ./runchina.py --cardNo ${{ secrets.ID_CARD_NUMBER }} --userName ${{ secrets.ID_CARD_NAME }} --timesToken ${{ github.event.inputs.timesToken }} > index.md
+          python ./runchina.py --cardNo ${{ secrets.ID_CARD_NUMBER }} --userName ${{ secrets.ID_CARD_NAME }} --timesToken ${{ secrets.TIMES_TOKEN }} > index.md
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
