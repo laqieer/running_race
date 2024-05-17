@@ -55,4 +55,5 @@ def print_results(results):
                 print(f"|{result['raceName']}|{result['scoreTime']}|{result['competitionType']}|{result['entryNumber']}|{result['scoreChip']}|{result['scoreShot']}|{standardLevels[result['standardLevel']+1]}|{'<br>'.join([x['paragraphName'] + '<br>' + x['paragraphScore'] for x in result['paragraphScoreList']])}|")
 
 if __name__ == "__main__":
+    print("[Home Page](https://laqieer.github.io/running.html){:btn} [Running Page](https://laqieer.github.io/running_page){:btn}")
     print_results(query_results())
