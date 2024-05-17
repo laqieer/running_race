@@ -50,9 +50,9 @@ def print_results(results):
                 if not has_result:
                     has_result = True
                     print(f"\n# {raceItem}\n")
-                    print("|Race|Date|Race Level|Number|Chip Time|Gun Time|Time Level|Split Time|")
+                    print("|Race|Date|Race Level|Number|Gun Time|Chip Time|Time Level|Split Time|")
                     print("|---|---|---|---|---|---|---|---|")
-                print(f"|{result['raceName']}|{result['scoreTime']}|{result['competitionType']}|{result['entryNumber']}|{result['scoreChip']}|{result['scoreShot']}|{standardLevels[result['standardLevel']+1]}|{'<br>'.join([x['paragraphName'] + '<br>' + x['paragraphScore'] for x in result['paragraphScoreList']])}|")
+                print(f"|{result['raceName']}|{result['scoreTime']}|{result['competitionType']}|{result['entryNumber']}|{result['scoreShot']}|{result['scoreChip']}|{standardLevels[result['standardLevel']+1]}|{'<br>'.join([x['paragraphName'] + '<br>' + x['paragraphScore'] for x in result['paragraphScoreList']])}|")
 
 if __name__ == "__main__":
     print("[Home Page](https://laqieer.github.io/running.html){: .btn} [Running Page](https://laqieer.github.io/running_page){: .btn}")
