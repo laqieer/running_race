@@ -6,11 +6,11 @@ Demo: https://laqieer.github.io/running_race/
 
 1. Query result on runchina and copy `timesToken`
 
-https://www.runchina.org.cn/#/data/data-mgt/score-query
+https://www.runchina.org.cn/#/data-score/public-score/list
 
 ![image](https://github.com/laqieer/running_race/assets/8841957/7d034b5c-88aa-4667-92c5-925f8a791aa2)
 
-https://www.runchina.org.cn/#/data/result-data?cardNo=`ID_CARD_NUMBER`&userName=`ID_CARD_NAME`&timesToken=`TIMES_TOKEN`
+https://www.runchina.org.cn/#/data-score/public-score/detail/xxxxxxxxxxxxx?cardNo=`ID_CARD_NUMBER`&userName=`ID_CARD_NAME`&timesToken=`TIMES_TOKEN`
 
 2. Config GitHub Action secrets
 
